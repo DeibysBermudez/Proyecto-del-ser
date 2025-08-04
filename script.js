@@ -142,14 +142,14 @@ async function sendMessage() {
   showTyping();
 
   try {
-    const response = await fetch('http://localhost:8000/chat', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({ pregunta })
-    });
+    const response = await fetch('/chat', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  },
+  body: JSON.stringify({ pregunta })
+});
 
     removeTyping();
 
@@ -170,4 +170,5 @@ if (sendBtn && input) {
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') sendMessage();
   });
+
 }
