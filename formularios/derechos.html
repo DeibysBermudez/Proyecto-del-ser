@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Derechos del Paciente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle" style="display: none;">
+<header>
+  <div class="encabezado">
+    <div class="marco-icono">
+      <img src="/assents/imagotipo_cmd@4x.png" alt="Logo" width="300" height="800">
+    </div>
+    <div class="iconos">
+      <div class="configuracion">
+        <img src="../assents/Icon ionic-ios-settings.svg" alt="Configuración">
+      </div>
+      <div class="notificacion">
+        <img src="../assents/Icon material-notifications-active.svg" alt="Notificación">
+      </div>
+      <label for="menu-toggle" class="imagen" style="cursor: pointer;">
+        <div id="avatarHeader" class="header-avatar">
+          <span id="inicialesHeader">U</span>
+        </div>
+      </label>
+    </div>
+  </div>
+</header>
+<nav class="mini-menu">
+  <div class="user-info-section">
+    <div class="user-avatar-menu">
+      <span id="inicialesMenu">U</span>
+    </div>
+    <h4 id="nombreUsuarioMenu">Nombre: Usuario</h4>
+    <div class="user-details">
+      <p id="documentoInfo"># de documento: </p>
+      <p id="habitacionInfo">Habitación: </p>
+      <p id="servicioInfo">Servicio: </p>
+    </div>
+  </div>
+  <a href="../index.html"> <img src="/assents/logout.png" alt="logout" /> Cerrar sesión </a>
+</nav>
+</div>
+  <div class="container">
+    <a href="../dashboard.html" class="btn-regresar">← Regresar</a>
+    <div class="titulo">Yo como paciente tengo<br><span style="font-size:2.1rem; letter-spacing:2px;">Derecho a:</span></div>
+
+    <div class="derechos-grid" id="derechosGrid">
+      <!-- Cards generados por JS -->
+    </div>
+
+    <button class="quiz-btn" id="quizBtn">¿Recuerdas tus derechos? ¡Haz el quiz!</button>
+    <div class="derechos-logo">
+      SIAU <br>
+      <span style="font-size:0.88em;font-weight:400;">Servicio de Información y Atención al Usuario</span>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal-content" id="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <img src="" class="modal-img" id="modal-img" style="display:none;">
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-desc" id="modal-desc"></div>
+      <div class="modal-nav">
+        <button class="modal-prev" id="modalPrev" title="Anterior derecho">⟸</button>
+        <button class="modal-next" id="modalNext" title="Siguiente derecho">⟹</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quiz Modal -->
+  <div class="modal-bg" id="quiz-bg">
+    <div class="modal-content" id="quiz-content">
+      <button class="modal-close" id="quizClose">&times;</button>
+      <div class="quiz-title">Quiz de Derechos del Paciente</div>
+      <div id="quizBody"></div>
+      <button id="quizNext" class="quiz-next-btn">Siguiente</button>
+      <div id="quizResult"></div>
+    </div>
+  </div>
+
+  <script src="script_Derechos.js"></script>
+</body>
+</html>
